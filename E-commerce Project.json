@@ -1,0 +1,893 @@
+{
+  "name": "E-commerce Project",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -672,
+        944
+      ],
+      "id": "cc51cfb9-d914-458a-936e-17ff62f1682a",
+      "name": "When chat message received",
+      "webhookId": "c6cd84fb-ed9a-4919-a194-7f1a63a61954"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        544,
+        256
+      ],
+      "id": "f6bad262-55ff-4d0c-951b-1d623647af86",
+      "name": "Simple Memory2"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-3.5-turbo",
+          "mode": "list",
+          "cachedResultName": "gpt-3.5-turbo"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -384,
+        1168
+      ],
+      "id": "14cd4e1e-9503-46b3-958a-5a7b21bc6acb",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "VdQEmsfp6ufaosWv",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        416,
+        256
+      ],
+      "id": "1dcfec9b-5c44-4a3c-89fd-7aea7d2bd9a4",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "VdQEmsfp6ufaosWv",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        416,
+        1056
+      ],
+      "id": "faf04212-13b2-4e9a-a813-37d32bae8c77",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "VdQEmsfp6ufaosWv",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        544,
+        1056
+      ],
+      "id": "dbe16997-f312-47ec-8408-7331d7d786bf",
+      "name": "Simple Memory1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-3.5-turbo",
+          "mode": "list",
+          "cachedResultName": "gpt-3.5-turbo"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        416,
+        656
+      ],
+      "id": "5fdfcf5b-333c-403d-ac29-6676553ae442",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "VdQEmsfp6ufaosWv",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        544,
+        656
+      ],
+      "id": "9c3a616e-d81b-4f58-9653-e8db27814775",
+      "name": "Simple Memory3"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        352,
+        1456
+      ],
+      "id": "23926295-170a-416a-b553-ff38bfef259e",
+      "name": "OpenAI Chat Model4",
+      "credentials": {
+        "openAiApi": {
+          "id": "VdQEmsfp6ufaosWv",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        480,
+        1456
+      ],
+      "id": "6ee1e97d-c23f-4d94-a251-eedd45b4ecf9",
+      "name": "Simple Memory4"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-3.5-turbo",
+          "mode": "list",
+          "cachedResultName": "gpt-3.5-turbo"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        416,
+        1968
+      ],
+      "id": "5a55c33c-1e3d-4899-9a63-7f1f04f0a6cb",
+      "name": "OpenAI Chat Model5",
+      "credentials": {
+        "openAiApi": {
+          "id": "VdQEmsfp6ufaosWv",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        544,
+        1968
+      ],
+      "id": "88f7d45a-e92e-457f-b757-f1e42b3c196b",
+      "name": "Simple Memory5"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "Refund Agent",
+        "limit": 10
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        672,
+        656
+      ],
+      "id": "8b96797f-545e-46dc-939b-20062170f6a7",
+      "name": "Get many rows in Supabase1",
+      "credentials": {
+        "supabaseApi": {
+          "id": "PVvCacm4uk8aKR7A",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "Customer Complaint Agent",
+        "limit": 10
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        608,
+        1456
+      ],
+      "id": "e8fe1699-51f9-4e37-8b28-5e10e200c5d2",
+      "name": "Get many rows in Supabase2",
+      "credentials": {
+        "supabaseApi": {
+          "id": "PVvCacm4uk8aKR7A",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "Order Tracking Agent",
+        "limit": 10
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        672,
+        1056
+      ],
+      "id": "3f1326ee-9766-45d3-b183-8f895c8f6095",
+      "name": "Get many rows in Supabase4",
+      "credentials": {
+        "supabaseApi": {
+          "id": "PVvCacm4uk8aKR7A",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "Human Supprt Agent",
+        "limit": 10,
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": []
+        }
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        672,
+        1968
+      ],
+      "id": "e9b9da29-8262-45ca-b81b-1c6e44f2f42b",
+      "name": "Get many rows in Supabase3",
+      "credentials": {
+        "supabaseApi": {
+          "id": "PVvCacm4uk8aKR7A",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.intent }}",
+                    "rightValue": "product_inquiry",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "a55d6fc1-6c99-4d08-a7d1-85e81077986d"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b19f1134-1d04-47c4-87c6-ce1dc2d1a61f",
+                    "leftValue": "={{ $json.intent }}",
+                    "rightValue": "refund",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "11cc7214-75cf-4cb6-abbc-a557569ba295",
+                    "leftValue": "={{ $json.intent }}",
+                    "rightValue": "order_tracking",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "2ef3a76c-bf42-4354-8018-7849b76cf169",
+                    "leftValue": "={{ $json.intent }}",
+                    "rightValue": "complaint",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "0b7ee70a-8420-4c50-9eae-3f0548406c1d",
+                    "leftValue": "={{ $json.intent }}",
+                    "rightValue": "human_support",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        128,
+        896
+      ],
+      "id": "178700a0-f07f-4bf8-8958-5061062cfa78",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cfb7fa0c-56a5-4dcf-9555-6ba79770881b",
+              "name": "intent",
+              "value": "={{$json.text}}",
+              "type": "string"
+            },
+            {
+              "id": "dc543bf7-9c42-472e-808f-10b16dc752c8",
+              "name": "chatInput",
+              "value": "={{$node[\"When chat message received\"].json.chatInput}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -96,
+        944
+      ],
+      "id": "b725466c-1bac-4e35-b7a8-13082d97bf3c",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "Customer Complaint Agent",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "order id",
+              "condition": "eq",
+              "keyValue": "ORD001"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "status",
+              "fieldValue": "closed"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        736,
+        1456
+      ],
+      "id": "50230d48-36b1-4399-b348-54f56b7685ce",
+      "name": "Update a row in Supabase",
+      "credentials": {
+        "supabaseApi": {
+          "id": "PVvCacm4uk8aKR7A",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a Supervisor Agent for an eCommerce AI system.\n\nYour role is to act like a shop supervisor who receives customer requests and assigns the work to the correct specialized employee agent.\n\nYou do NOT answer the customer.\nYou do NOT provide solutions.\nYour only job is to understand the customer's current message and classify it into ONE intent so the request can be routed to the correct agent.\n\nIgnore previous conversation context.\nClassify ONLY the current user message.\n\n\nAvailable Employee Agents:\n\n1. product_inquiry\nEmployee Role: Customer Dealing Employee\n\nHandles:\n- Buying products\n- Product recommendations\n- Product prices\n- Product availability\n- Product features\n- Product comparisons\n- Product specifications\n\nExamples:\n\"I want to buy a laptop\"\n\"Show me available phones\"\n\"Recommend a mobile\"\n\n\n2. order_tracking\nEmployee Role: Operations Employee\n\nHandles:\n- Order tracking\n- Order status\n- Shipping status\n- Delivery information\n- Tracking number\n- Estimated delivery date\n\nExamples:\n\"Where is my order?\"\n\"Track my order ORD001\"\n\"When will my order arrive?\"\n\nIMPORTANT:\nUse order_tracking only when the customer asks about delivery or order location/status.\n\n\n3. refund\nEmployee Role: Cashier Employee\n\nHandles:\n- Refund requests\n- Refund status\n- Return requests\n- Refund amount\n- Refund method\n- Cancellation related to refund\n\nExamples:\n\"I want a refund\"\n\"Check my refund status\"\n\"Refund for ORD001\"\n\n\n4. complaint\nEmployee Role: Complaint Handling Employee\n\nHandles:\n- Customer complaints\n- Damaged products\n- Wrong products\n- Defective products\n- Complaint details\n- Complaint status\n- Updating complaint\n- Closing complaint\n- Escalating complaint\n\nIMPORTANT:\nIf the message contains the word \"complaint\", ALWAYS classify as complaint.\n\nExamples:\n\"Check complaint ORD001\"\n\"Show complaint details\"\n\"Update my complaint\"\n\"Mark complaint as closed\"\n\"My laptop is damaged\"\n\n\n5. human_support\nEmployee Role: Support Employee\n\nHandles:\n- Human agent requests\n- Live support\n- Customer representative\n- Speaking with a person\n\nExamples:\n\"I want to talk to a human\"\n\"Connect me with support\"\n\n\nPriority Rule:\n\nIf the customer message contains multiple intents, select only ONE using this priority:\n\n1. complaint\n2. refund\n3. order_tracking\n4. human_support\n5. product_inquiry\n\n\nExamples:\n\n\"My laptop is damaged and I want refund\"\nOutput:\ncomplaint\n\n\n\"Check complaint ORD001\"\nOutput:\ncomplaint\n\n\n\"Track order ORD001\"\nOutput:\norder_tracking\n\n\n\"I want to buy a laptop\"\nOutput:\nproduct_inquiry\n\n\n\"I need a human agent\"\nOutput:\nhuman_support\n\n\nOutput Rules:\n\n- Return ONLY the intent name.\n- Use lowercase only.\n- No explanation.\n- No extra words.\n- No punctuation.\n\n\nCurrent user message:\n\n{{ $json.chatInput }}",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        -448,
+        944
+      ],
+      "id": "3085e4a6-1e45-40e3-af74-ddf2f77e89fb",
+      "name": "supervisor agent"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a Customer Dealing Employee Agent in an eCommerce shop.\n\nYour responsibility is to interact with customers, understand their product needs, and help them choose the right products.\n\nYou handle:\n- Product recommendations\n- Product prices\n- Product availability\n- Product features\n- Product comparisons\n- Purchase assistance\n\nYou do not handle:\n- Order tracking\n- Refunds\n- Complaints\n- Human support requests\n\nYour job is to help customers find and purchase products.\n\nUse the Product Database tool to answer questions.\n\nYou can help with:\n- Product recommendations\n- Product prices\n- Product availability\n- Product features\n- Product comparisons\n\nIf the user wants to buy a product, search the product database and recommend matching products.\n\nNever ask for an Order ID.\nNever mention order tracking.\nNever mention refunds.\nNever mention complaints.\n\nCurrent user message \n{{ $json.chatInput }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        480,
+        32
+      ],
+      "id": "ca53fcdd-30c1-4980-9d9d-79809ba4a79f",
+      "name": "product inquiry agent"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an Operations Employee Agent in an eCommerce shop.\n\nYour responsibility is to manage customer order information and provide accurate delivery updates.\n\nYou handle:\n- Order status\n- Shipping information\n- Tracking numbers\n- Estimated delivery dates\n\nYou do not handle:\n- Product recommendations\n- Refund requests\n- Complaints\n\nYour only responsibility is to help customers track their orders.\n\nInstructions:\n\n1. Read the current user message.\n\n2. If the user message contains an Order ID (for example: ORD001, ORD-1001, ORDER12345), extract the Order ID automatically.\n\n3. If an Order ID is found:\n   - Use the Order Tracking Supabase tool.\n   - Search the database using the extracted Order ID.\n   - Return only the retrieved information:\n     - Product Name\n     - Order Status\n     - Tracking Number\n     - Estimated Delivery Date\n\n4. If the Order ID does not exist in the database, reply:\n   \"No order was found with this Order ID. Please check the Order ID and try again.\"\n\n5. If the user does not provide an Order ID, politely reply:\n   \"Please provide your Order ID so I can track your order.\"\n\nImportant Rules:\n- Never ask for an Order ID if it is already present in the user's message.\n- Never say \"I don't have an Order ID\" if the user has already provided one.\n- Never mention refunds.\n- Never mention complaints.\n- Never classify intents.\n- Always use the Order Tracking Supabase tool when an Order ID is available.\n- Return only the order information from the database.\n\nCurrent user message:\n\n{{ $json.chatInput }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        480,
+        832
+      ],
+      "id": "3baa16ff-ccb3-4b16-88db-68416c2ff7ee",
+      "name": "order tracking agent"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a Cashier Employee Agent in an eCommerce shop.\n\nYour responsibility is to manage payment-related customer requests and refund information.\n\nYou handle:\n- Refund status\n- Refund amount\n- Refund method\n- Return-related refund information\n\nYou do not handle:\n- Product recommendations\n- Order delivery tracking\n- Complaints\n\nAlways use the Refund database.\n\nResponsibilities:\n\n- Check refund requests.\n- Create refund requests.\n- Update refund status.\n- Explain refund eligibility.\n\nIf Order ID exists in memory, use it automatically.\n\nIf not, ask for:\n\n- Order ID\n\nReturn:\n\n- Refund Status\n- Refund Amount\n- Refund Method\n- Refund Reason\n- Estimated Processing Time\n\nIf no refund exists, offer to create one.\n\nNever invent refund information.\n {{ $json.chatInput }}\nIf a refund record already exists, only display the refund details.\n\nDo not ask the customer to create or proceed with another refund request.\n\nIf no refund record exists, then inform the customer that no refund request was found and ask whether they would like to create one.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        480,
+        432
+      ],
+      "id": "f4a23d41-a451-4ff8-ab9d-3f3bc84d55bb",
+      "name": "Refund agent"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a Complaint Handling Employee Agent in an eCommerce shop.\n\nYour responsibility is to handle customer issues and resolve complaints.\n\nYou handle:\n- Damaged products\n- Wrong products\n- Defective products\n- Complaint details\n- Complaint status checking\n- Complaint updates\n- Complaint escalation\n\nYou can:\n- View complaint records\n- Update complaint status\n- Add complaint information\n\nYou have two tools:\n\n1. Get Complaint Tool\n   - Use ONLY when the user wants to check or view complaint details.\n\n2. Update Complaint Tool\n   - Use ONLY when the user wants to:\n     - update a complaint\n     - change complaint status\n     - close a complaint\n     - resolve a complaint\n     - mark as closed\n     - mark as resolved\n     - change priority\n     - add notes\n\nRules:\n\n- If the user says:\n  \"Mark this complaint as Closed\"\n  \"Update the complaint status to Resolved\"\n  \"Set status to In Progress\"\n\n  ALWAYS use the Update Complaint Tool.\n\n- Do NOT use the Get Complaint Tool for update requests.\n\n- If the Order ID is already available from the conversation, use it.\n\n- If the user does not specify a new status, ask:\n  \"What status would you like to set? (Open, In Progress, Resolved, Closed)\"\n\nCurrent user message:\n\n{{ $json.chatInput }}\nWhen updating a complaint, update the database field \"status\".\n\nExample:\nUser: Mark this complaint as Closed.\nAction:\nUpdate complaint where order id matches the user's order id.\nSet:\nstatus = closed\nComplaint status can be changed between:\nopen, in progress, resolved, closed.\n\nIf the user requests a new valid status, always use the Update Complaint Tool even if the current status is already different.\n\nNever refuse status changes.\nAlways update the database when requested.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        480,
+        1232
+      ],
+      "id": "1762cb61-4c4b-4030-a1ba-26def8e1dce5",
+      "name": "Complaint agent"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "You are a Customer Support Employee Agent in an eCommerce shop.\n\nYour responsibility is to handle customers who need personal assistance.\n\nYou handle:\n- Human agent requests\n- Support tickets\n- Escalation requests\n- Customer assistance\n\nYou provide support when automated agents cannot solve the customer's issue.\n\nAlways use the Human Support database.\n\nResponsibilities:\n\n- Connect customers with human support.\n- Check existing support requests.\n- Create new support requests.\n- Escalate requests.\n- Update request status.\n\nRules:\n\nIf Order ID exists in memory, use it automatically.\n\nIf no Order ID exists, ask for:\n\n- Order ID\n\nIf support request exists, return:\n\n• Order ID\n• Issue\n• Status\n• Priority\n• Assigned To\n\nIf customer asks:\n\n- I want a human.\n- Live agent.\n- Speak with support.\n\nCheck the database.\n\nIf request exists:\n\nConfirm that support has been notified.\n\nIf no request exists:\n\nCollect:\n\n- Name\n- Email\n- Order ID\n- Issue\n\nCreate a new support request.\n\nIf customer asks to escalate:\n\nUpdate:\n\nStatus = Escalated\n\nAssigned To = Support Manager\n\nIf customer asks whether the issue is resolved:\n\nCheck the database.\n\nIf Status = Resolved\n\nSay:\n\n\"Your issue has been resolved.\"\n\nOtherwise\n\nSay:\n\n\"Your request is still being handled.\"\n\nNever invent support requests.\n\nBe professional.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        480,
+        1744
+      ],
+      "id": "bb1d7531-a9ca-4ca8-b210-156dfaf5397c",
+      "name": "Human support agent"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "Product Inquiry"
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        672,
+        256
+      ],
+      "id": "32554b6b-9918-4797-998c-b305a2edbfc8",
+      "name": "Update a row in Supabase1",
+      "credentials": {
+        "supabaseApi": {
+          "id": "PVvCacm4uk8aKR7A",
+          "name": "Supabase account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "supervisor agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory2": {
+      "ai_memory": [
+        [
+          {
+            "node": "product inquiry agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "supervisor agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "product inquiry agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "order tracking agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "order tracking agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Refund agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory3": {
+      "ai_memory": [
+        [
+          {
+            "node": "Refund agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Complaint agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory4": {
+      "ai_memory": [
+        [
+          {
+            "node": "Complaint agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Human support agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory5": {
+      "ai_memory": [
+        [
+          {
+            "node": "Human support agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many rows in Supabase1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Refund agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many rows in Supabase2": {
+      "ai_tool": [
+        [
+          {
+            "node": "Complaint agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many rows in Supabase4": {
+      "ai_tool": [
+        [
+          {
+            "node": "order tracking agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many rows in Supabase3": {
+      "ai_tool": [
+        [
+          {
+            "node": "Human support agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "product inquiry agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Refund agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "order tracking agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Complaint agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Human support agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update a row in Supabase": {
+      "ai_tool": [
+        [
+          {
+            "node": "Complaint agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "supervisor agent": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update a row in Supabase1": {
+      "ai_tool": [
+        [
+          {
+            "node": "product inquiry agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "a21cdf86-c78f-4206-b088-f2e0f8f04874",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "34bdee61d010eac3fa6aa1db612116d941500ea8dd70021c2f1ec936fb80d9e2"
+  },
+  "id": "zVFpGZszOz2qRcJW",
+  "tags": []
+}
