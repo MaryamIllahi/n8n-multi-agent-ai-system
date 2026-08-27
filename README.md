@@ -136,8 +136,8 @@ The workflow includes database tools for:
 
 ## 📁 Project Structure
 
-ai-ecommerce-multi-agent/
-│
+n8n-multi-agent-ai-system/
+
 ├── E-commerce Project.json
 └── README.md
 
