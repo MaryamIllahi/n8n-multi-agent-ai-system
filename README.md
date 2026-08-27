@@ -43,13 +43,6 @@ Assistant: Please provide your Order ID.
 User: ORD002
 
 → Refund Agent
-# 🤖 AI E-Commerce Multi-Agent System
-
-An AI-powered **Multi-Agent E-Commerce Customer Support System** built with **n8n, OpenAI, and Supabase**.
-
-The system uses a **Supervisor Agent** to understand customer requests and automatically route them to the appropriate specialized AI agent.
-
-Each agent is responsible for a specific area of e-commerce support, making the system organized, scalable, and efficient.
 
 ## 🛍️ Product Inquiry Agent
 
