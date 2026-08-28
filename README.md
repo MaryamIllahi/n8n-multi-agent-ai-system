@@ -1,12 +1,12 @@
 # 🤖 AI Multi-Agent E-Commerce Support System
 
-A supervisor-based multi-agent AI system built in **n8n** that automates end-to-end e-commerce customer support — product inquiries, order tracking, refunds, complaints, and human escalation — using a team of specialized AI agents that work together like a real support team.
+A supervisor-based multi-agent AI system built in **n8n** that automates end-to-end e-commerce customer support product inquiries, order tracking, refunds, complaints, and human escalation using a team of specialized AI agents that work together like a real support team.
 
 ---
 
 ## 📌 Project Overview
 
-Instead of a single chatbot trying to handle every type of request, this system uses a **Supervisor Agent** that reads each customer message, classifies its intent, and routes it to the correct **specialized employee agent** — just like a real shop supervisor assigning tasks to the right department.
+Instead of a single chatbot trying to handle every type of request, this system uses a **Supervisor Agent** that reads each customer message, classifies its intent, and routes it to the correct **specialized employee agent**  just like a real shop supervisor assigning tasks to the right department.
 
 Each specialized agent has its own role, its own instructions, and its own connection to a **Supabase** database table, so it only ever works within its area of responsibility.
 
@@ -28,22 +28,22 @@ Switch (router)
 └──► Human Support Agent → Supabase: Human Support Agent
 
 ### 🧭 Supervisor Agent
-Reads the current user message and classifies it into exactly one intent — `product_inquiry`, `order_tracking`, `refund`, `complaint`, or `human_support` — without answering the customer itself. When a message matches multiple intents, it resolves the conflict using a fixed priority order: **complaint → refund → order_tracking → human_support → product_inquiry**.
+Reads the current user message and classifies it into exactly one intent `product_inquiry`, `order_tracking`, `refund`, `complaint`, or `human_support`  without answering the customer itself. When a message matches multiple intents, it resolves the conflict using a fixed priority order: **complaint → refund → order_tracking → human_support → product_inquiry**.
 
 ### 🛍️ Product Inquiry Agent
-Acts as a customer dealing employee — recommends products, and answers questions about price, availability, features, and comparisons. Never touches orders, refunds, or complaints.
+Acts as a customer dealing employee recommends products, and answers questions about price, availability, features, and comparisons. Never touches orders, refunds, or complaints.
 
 ### 📦 Order Tracking Agent
-Acts as an operations employee — automatically extracts the Order ID from the customer's message and returns product name, order status, tracking number, and estimated delivery date.
+Acts as an operations employee automatically extracts the Order ID from the customer's message and returns product name, order status, tracking number, and estimated delivery date.
 
 ### 💳 Refund Agent
-Acts as a cashier employee — checks refund status, amount, method, and reason for a given order, and offers to create a new refund request if none exists. Never invents refund information.
+Acts as a cashier employee checks refund status, amount, method, and reason for a given order, and offers to create a new refund request if none exists. Never invents refund information.
 
 ### ⚠️ Complaint Agent
 Acts as a complaint handling employee. It first checks whether a complaint already exists for the given Order ID. If none exists, it collects the details and creates a new complaint record. If a complaint already exists, it intelligently distinguishes between the customer following up on the *same* issue versus reporting a *new* issue on the same order — updating the existing record's type, description, priority, and status accordingly.
 
 ### 🧑‍💼 Human Support Agent
-Acts as a support employee — connects customers with human support when automated agents can't resolve an issue, creates new support tickets, and escalates existing ones.
+Acts as a support employee connects customers with human support when automated agents can't resolve an issue, creates new support tickets, and escalates existing ones.
 
 ---
 
@@ -104,12 +104,6 @@ https://github.com/user-attachments/assets/3c35e9d2-8261-46c9-ac10-7c348ce8dcb5
 4. Activate the workflow and test it using the Chat Trigger.
 
 > ⚠️ **Note:** This repository does not include any API keys or credentials. You must connect your own OpenAI and Supabase accounts after importing the workflow.
-
----
-
-## 🖥️ Workflow Screenshot
-
-![Multi-Agent Workflow](workflow-screenshot.png)
 
 ---
 
